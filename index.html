@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glen Gilbert Dias - Personal Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .section {
+            scroll-margin-top: 60px;
+        }
+        /* Animation Styles */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #4f46e5;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-slate-900">Glen Gilbert Dias</a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#about" class="text-slate-600 hover:text-indigo-600 transition duration-300">About</a>
+                <a href="#experience" class="text-slate-600 hover:text-indigo-600 transition duration-300">Experience</a>
+                <a href="#education" class="text-slate-600 hover:text-indigo-600 transition duration-300">Education</a>
+                <a href="#certifications" class="text-slate-600 hover:text-indigo-600 transition duration-300">Certifications</a>
+                <a href="#ai-tools" class="text-slate-600 hover:text-indigo-600 transition duration-300">AI Tools</a>
+                <a href="#contact" class="text-slate-600 hover:text-indigo-600 transition duration-300">Contact</a>
+                <a href="#contact" class="bg-indigo-600 text-white px-5 py-2 rounded-lg hover:bg-indigo-700 transition duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">Hire Me</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-slate-800 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-md">
+            <a href="#about" class="block py-3 px-6 text-slate-700 hover:bg-indigo-50">About</a>
+            <a href="#experience" class="block py-3 px-6 text-slate-700 hover:bg-indigo-50">Experience</a>
+            <a href="#education" class="block py-3 px-6 text-slate-700 hover:bg-indigo-50">Education</a>
+            <a href="#certifications" class="block py-3 px-6 text-slate-700 hover:bg-indigo-50">Certifications</a>
+            <a href="#ai-tools" class="block py-3 px-6 text-slate-700 hover:bg-indigo-50">AI Tools</a>
+            <a href="#contact" class="block py-3 px-6 text-slate-700 hover:bg-indigo-50">Contact</a>
+            <div class="p-4">
+                 <a href="#contact" class="w-full text-center block bg-indigo-600 text-white px-5 py-2 rounded-lg hover:bg-indigo-700 transition duration-300 shadow-md">Hire Me</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- Hero Section -->
+        <section id="home" class="text-center py-20 fade-in-section">
+            <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 mb-4 leading-tight">
+                Hi, I'm Glen Gilbert Dias
+            </h1>
+            <p class="text-xl md:text-2xl text-indigo-600 font-semibold mb-6">
+                Finance & Accounting Professional | MBA | SAP Specialist
+            </p>
+            <p class="max-w-3xl mx-auto text-slate-600 mb-8" id="professional-summary">
+               MBA-qualified finance professional with 5+ years’ experience in accounting, financial reporting, and process improvement across multinational environments.
+            </p>
+            <div class="flex justify-center items-center space-x-4">
+                <a href="https://www.linkedin.com/in/glen-dias" target="_blank" class="text-slate-500 hover:text-indigo-600 transition duration-300 transform hover:scale-110">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"/></svg>
+                </a>
+                <a href="https://medium.com/@diasglen.gd" target="_blank" class="text-slate-500 hover:text-indigo-600 transition duration-300 transform hover:scale-110">
+                    <svg class="w-8 h-8" role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><title>Medium</title><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.46 5.18h-3.4v13.64h3.4V5.18zM24 5.18h-3.4v13.64H24V5.18z"/></svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 section fade-in-section">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-12 text-slate-900">About Me</h2>
+                <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-500">
+                    <p class="text-lg text-slate-700 leading-relaxed mb-6" id="about-summary">
+                        MBA-qualified finance professional with 5+ years’ experience in accounting, financial reporting, and process improvement across multinational environments. Skilled in SAP (S/4HANA, ERP, MM), Zoho Books, QuickBooks, Tally, financial analysis, and cross-border compliance, with a track record of delivering measurable results — including reducing month-end close time by 25%, reconciling 100+ accounts with 15% greater efficiency, and cutting operational expenses by 10%. Adept at building client relationships, ensuring compliance with IFRS/GAAP, and collaborating with cross-functional teams to achieve revenue and cost optimization goals. Multilingual in English, German, Hindi, and Kannada, bringing cultural fluency and adaptability to diverse work environments.
+                    </p>
+                    <hr class="my-8 border-slate-200">
+                    <h3 class="text-2xl font-semibold text-slate-800 mb-4">Top Skills</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-4 py-2 rounded-full">SAP (S/4HANA, ERP, MM)</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-4 py-2 rounded-full">Financial Reporting & Analysis</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-4 py-2 rounded-full">Zoho Books</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-4 py-2 rounded-full">QuickBooks</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-4 py-2 rounded-full">Tally</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-4 py-2 rounded-full">IFRS/GAAP Compliance</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-4 py-2 rounded-full">Cost Reduction</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-4 py-2 rounded-full">Inventory Management</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-4 py-2 rounded-full">Commercial Driving</span>
+                        <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-4 py-2 rounded-full">Cooking</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-20 bg-slate-200 -mx-6 px-6 section fade-in-section">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-12 text-slate-900">Work Experience</h2>
+                <div class="space-y-12">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="md:w-1/4">
+                            <p class="text-lg font-semibold text-indigo-600">Feb 2025 - Present</p>
+                            <p class="text-slate-600">BCL Globiz - Dubai</p>
+                        </div>
+                        <div class="md:w-3/4 bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="text-2xl font-bold text-slate-800 mb-2">Account Executive</h3>
+                            <ul class="list-disc list-inside text-slate-700 leading-relaxed space-y-2">
+                                <li>Build and maintain strong relationships with key client stakeholders, delivering tailored financial solutions.</li>
+                                <li>Coordinate between clients and finance teams to ensure accurate reporting and service delivery.</li>
+                                <li>Monitor market trends, identify revenue opportunities, and implement risk mitigation strategies.</li>
+                                <li>Maintain accurate CRM records to support financial reporting and decision-making.</li>
+                            </ul>
+                        </div>
+                    </div>
+                     <div class="flex flex-col md:flex-row gap-6">
+                        <div class="md:w-1/4">
+                             <p class="text-lg font-semibold text-indigo-600">Apr 2024 - Oct 2024</p>
+                            <p class="text-slate-600">Hive</p>
+                        </div>
+                        <div class="md:w-3/4 bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="text-2xl font-bold text-slate-800 mb-2">Accountant</h3>
+                            <ul class="list-disc list-inside text-slate-700 leading-relaxed space-y-2">
+                                <li>Delivered weekly financial reports, reducing processing time by 25% and enabling faster decisions.</li>
+                                <li>Identified cost-saving measures, cutting expenses by 10% across multiple accounts.</li>
+                                <li>Reconciled 100+ accounts during year-end close, improving efficiency by 15%.</li>
+                                <li>Trained and onboarded 10 new hires, sustaining operational performance during expansion.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="md:w-1/4">
+                             <p class="text-lg font-semibold text-indigo-600">Feb 2023 - Apr 2024</p>
+                            <p class="text-slate-600">Hive</p>
+                        </div>
+                        <div class="md:w-3/4 bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="text-2xl font-bold text-slate-800 mb-2">Working Student - Fulfilment Support</h3>
+                            <ul class="list-disc list-inside text-slate-700 leading-relaxed space-y-2">
+                                <li>Managed logistics and supply chain operations, ensuring seamless order flow.</li>
+                                <li>Revamped stock placement strategies, reducing picking and packing time by 30%.</li>
+                                <li>Consistently exceeded order processing targets — fulfilled 1,800 orders in a single day.</li>
+                                <li>Achieved 99.9% data entry accuracy in picking, packing, and label preparation.</li>
+                                <li>Resolved shipping issues proactively, increasing order fulfillment efficiency to 113% of target.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="md:w-1/4">
+                            <p class="text-lg font-semibold text-indigo-600">Nov 2022 - Jan 2023</p>
+                            <p class="text-slate-600">Flink</p>
+                        </div>
+                        <div class="md:w-3/4 bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="text-2xl font-bold text-slate-800 mb-2">Delivery Driver</h3>
+                            <p class="text-slate-700 leading-relaxed">As a Delivery Driver for Flink, I was responsible for the timely delivery of groceries and daily essentials to customers. My role also included inventory management at the dark store, where I maintained stock levels by checking on remaining products and restocking shelves to ensure constant availability.</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="md:w-1/4">
+                            <p class="text-lg font-semibold text-indigo-600">Apr 2020 - Apr 2022</p>
+                            <p class="text-slate-600">Tata Consultancy Services</p>
+                        </div>
+                        <div class="md:w-3/4 bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="text-2xl font-bold text-slate-800 mb-2">Workflow Specialist</h3>
+                            <ul class="list-disc list-inside text-slate-700 leading-relaxed space-y-2">
+                                <li>Optimized workflows, increasing communication efficiency by 30% via process automation.</li>
+                                <li>Reduced client escalations by 70% through proactive issue resolution.</li>
+                                <li>Developed and delivered training programs that improved knowledge retention by 30%.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="md:w-1/4">
+                            <p class="text-lg font-semibold text-indigo-600">Nov 2019 - Mar 2020</p>
+                            <p class="text-slate-600">Tata Consultancy Services</p>
+                        </div>
+                        <div class="md:w-3/4 bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="text-2xl font-bold text-slate-800 mb-2">Data Entry Associate</h3>
+                            <ul class="list-disc list-inside text-slate-700 leading-relaxed space-y-2">
+                                <li>Processed high-volume mortgage applications with 100% accuracy.</li>
+                                <li>Streamlined data entry processes, improving efficiency by 45%.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="py-20 section fade-in-section">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-12 text-slate-900">Education</h2>
+                <div class="space-y-8">
+                    <div class="bg-white p-8 rounded-xl shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+                        <h3 class="text-2xl font-bold text-slate-800 mb-1">Master of Business Administration - MBA</h3>
+                        <p class="text-lg font-semibold text-indigo-600 mb-2">IU International University of Applied Sciences</p>
+                        <p class="text-slate-600">October 2021 - March 2024</p>
+                        <p class="text-slate-700 mt-2">Specialization in Accounting and Finance, Consumer Behaviour and Research.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+                        <h3 class="text-2xl font-bold text-slate-800 mb-1">Bachelor of Business Administration - BBA</h3>
+                        <p class="text-lg font-semibold text-indigo-600 mb-2">Bhandarkars' Arts & Science College</p>
+                        <p class="text-slate-600">May 2016 - May 2019</p>
+                        <p class="text-slate-700 mt-2">Focus on Business Administration and Management, General.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications & Awards Section -->
+        <section id="certifications" class="py-20 bg-slate-200 -mx-6 px-6 section fade-in-section">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-12 text-slate-900">Certifications & Awards</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <h3 class="text-2xl font-bold text-slate-800 mb-4">Certifications</h3>
+                        <ul class="space-y-3 text-slate-700">
+                           <li class="flex items-start"><span class="text-indigo-500 mr-2 mt-1">&#10003;</span> Digital Intelligence in Business Transformation</li>
+                           <li class="flex items-start"><span class="text-indigo-500 mr-2 mt-1">&#10003;</span> Learning SAP MM (Materials Management)</li>
+                           <li class="flex items-start"><span class="text-indigo-500 mr-2 mt-1">&#10003;</span> SAP Financials Essential Training</li>
+                           <li class="flex items-start"><span class="text-indigo-500 mr-2 mt-1">&#10003;</span> Strategic Human Resources</li>
+                           <li class="flex items-start"><span class="text-indigo-500 mr-2 mt-1">&#10003;</span> SAP ERP Essential Training</li>
+                        </ul>
+                    </div>
+                     <div class="bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <h3 class="text-2xl font-bold text-slate-800 mb-4">Honors & Awards</h3>
+                        <ul class="space-y-3 text-slate-700">
+                           <li class="flex items-start"><span class="text-indigo-500 mr-2 mt-1">&#10003;</span> Outstanding Performance in TCS-PwC L&D</li>
+                           <li class="flex items-start"><span class="text-indigo-500 mr-2 mt-1">&#10003;</span> Star of the month</li>
+                           <li class="flex items-start"><span class="text-indigo-500 mr-2 mt-1">&#10003;</span> Employee of the Month</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Tools Section -->
+        <section id="ai-tools" class="py-20 section fade-in-section">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl font-bold text-center mb-12 text-slate-900">AI-Powered Professional Tools</h2>
+                
+                <!-- Cover Letter Generator -->
+                <div class="mb-16">
+                    <h3 class="text-3xl font-bold mb-4 text-slate-800">Cover Letter Intro Generator</h3>
+                    <p class="text-lg text-slate-600 mb-8">
+                        Let AI give you a head start! Click the button below to generate a professional cover letter introduction based on my profile summary, powered by the Gemini API.
+                    </p>
+                    <button id="generate-letter-btn" class="bg-indigo-600 text-white px-8 py-3 rounded-lg hover:bg-indigo-700 transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 mb-8 text-lg font-semibold">
+                        ✨ Generate Introduction
+                    </button>
+                    <div class="bg-white p-8 rounded-xl shadow-lg text-left min-h-[150px] relative">
+                        <div id="loader-letter" class="hidden loader"></div>
+                        <p id="cover-letter-output" class="text-slate-700 leading-relaxed whitespace-pre-wrap"></p>
+                        <button id="copy-letter-btn" class="hidden absolute top-4 right-4 p-2 rounded-md bg-slate-200 hover:bg-slate-300 transition-colors" title="Copy to clipboard">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-slate-600"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        </button>
+                        <div id="copy-letter-message" class="absolute bottom-4 right-4 text-green-600 opacity-0 transition-opacity duration-300 text-sm">Copied!</div>
+                    </div>
+                </div>
+
+                <!-- Interview Question Generator -->
+                <div>
+                    <h3 class="text-3xl font-bold mb-4 text-slate-800">AI Recruiter Assistant</h3>
+                    <p class="text-lg text-slate-600 mb-8">
+                        Hiring for a role? Enter the job title below, and our AI will generate tailored interview questions based on my skills and experience.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+                        <input type="text" id="job-title-input" placeholder="E.g., Senior Financial Analyst" class="w-full sm:w-80 px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition">
+                        <button id="generate-questions-btn" class="bg-slate-800 text-white px-8 py-3 rounded-lg hover:bg-slate-900 transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-lg font-semibold w-full sm:w-auto">
+                            ✨ Generate Questions
+                        </button>
+                    </div>
+                     <div class="bg-white p-8 rounded-xl shadow-lg text-left min-h-[150px] relative">
+                        <div id="loader-questions" class="hidden loader"></div>
+                        <div id="interview-questions-output" class="text-slate-700 leading-relaxed whitespace-pre-wrap"></div>
+                        <button id="copy-questions-btn" class="hidden absolute top-4 right-4 p-2 rounded-md bg-slate-200 hover:bg-slate-300 transition-colors" title="Copy to clipboard">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-slate-600"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        </button>
+                        <div id="copy-questions-message" class="absolute bottom-4 right-4 text-green-600 opacity-0 transition-opacity duration-300 text-sm">Copied!</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 section fade-in-section">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-4 text-slate-900">Get In Touch</h2>
+                <p class="text-lg text-slate-600 mb-8">
+                    I'm currently open to new opportunities and collaborations. Feel free to reach out!
+                </p>
+                <div class="inline-block relative">
+                    <p id="email" class="bg-white text-lg font-mono p-4 rounded-lg shadow-md pr-16">diasglen.gd@gmail.com</p>
+                    <button onclick="copyEmail()" class="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-md bg-slate-200 hover:bg-slate-300 transition-colors" title="Copy email">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-slate-600"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    </button>
+                </div>
+                 <div id="copy-message" class="mt-4 text-green-600 opacity-0 transition-opacity duration-300">Email copied to clipboard!</div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white">
+        <div class="container mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center">
+            <p>&copy; 2024 Glen Gilbert Dias. All rights reserved.</p>
+            <div class="flex space-x-4 mt-4 md:mt-0">
+                <a href="https://www.linkedin.com/in/glen-dias" target="_blank" class="hover:text-indigo-400 transition duration-300">LinkedIn</a>
+                <a href="https://medium.com/@diasglen.gd" target="_blank" class="hover:text-indigo-400 transition duration-300">Medium</a>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // --- Mobile Menu Toggle ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
+        for (let link of mobileMenuLinks) {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        }
+
+
+        // --- Copy Email Function ---
+        function copyEmail() {
+            const emailText = document.getElementById('email').innerText;
+            copyToClipboard(emailText, 'copy-message');
+        }
+
+        // --- Smooth Scrolling for Navigation ---
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href && href.length > 1) {
+                    e.preventDefault();
+                    const targetElement = document.querySelector(href);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+
+        // --- Fade-in Animation on Scroll ---
+        const sections = document.querySelectorAll('.fade-in-section');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+        
+        // --- Generic API Call Function ---
+        async function callGeminiApi(systemPrompt, userQuery) {
+            const apiKey = ""; 
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+
+            const payload = {
+                contents: [{ parts: [{ text: userQuery }] }],
+                systemInstruction: { parts: [{ text: systemPrompt }] },
+            };
+            
+            const response = await fetch(apiUrl, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+
+            if (!response.ok) {
+                throw new Error(`API request failed with status ${response.status}`);
+            }
+
+            const result = await response.json();
+            const candidate = result.candidates?.[0];
+
+            if (candidate && candidate.content?.parts?.[0]?.text) {
+                return candidate.content.parts[0].text;
+            } else {
+                return "Sorry, the AI couldn't generate a response. Please try again later.";
+            }
+        }
+
+
+        // --- Cover Letter Feature ---
+        const generateLetterBtn = document.getElementById('generate-letter-btn');
+        const letterOutputEl = document.getElementById('cover-letter-output');
+        const letterLoader = document.getElementById('loader-letter');
+        const copyLetterBtn = document.getElementById('copy-letter-btn');
+
+        generateLetterBtn.addEventListener('click', async () => {
+            const summary = document.getElementById('about-summary').innerText;
+            
+            letterOutputEl.innerText = '';
+            letterLoader.classList.remove('hidden');
+            copyLetterBtn.classList.add('hidden');
+            generateLetterBtn.disabled = true;
+            generateLetterBtn.classList.add('opacity-50', 'cursor-not-allowed');
+
+            const systemPrompt = "You are a professional career coach and expert resume writer. Your task is to write a concise and impactful introductory paragraph for a cover letter based on the provided professional summary. The tone should be professional, confident, and tailored to attract a recruiter's attention. Keep it to one paragraph, under 100 words.";
+            const userQuery = `Here is the professional summary:\n\n"${summary}"\n\nPlease generate the cover letter introduction.`;
+            
+            try {
+                const generatedText = await callGeminiApi(systemPrompt, userQuery);
+                letterOutputEl.innerText = generatedText;
+                if (!generatedText.startsWith("Sorry")) {
+                    copyLetterBtn.classList.remove('hidden');
+                }
+            } catch (error) {
+                console.error('Gemini API Error:', error);
+                letterOutputEl.innerText = "An error occurred while contacting the AI model. Please check the console for details.";
+            } finally {
+                letterLoader.classList.add('hidden');
+                generateLetterBtn.disabled = false;
+                generateLetterBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+            }
+        });
+        
+        copyLetterBtn.addEventListener('click', () => {
+            copyToClipboard(letterOutputEl.innerText, 'copy-letter-message');
+        });
+        
+        // --- Interview Questions Feature ---
+        const generateQuestionsBtn = document.getElementById('generate-questions-btn');
+        const questionsOutputEl = document.getElementById('interview-questions-output');
+        const questionsLoader = document.getElementById('loader-questions');
+        const copyQuestionsBtn = document.getElementById('copy-questions-btn');
+        const jobTitleInput = document.getElementById('job-title-input');
+
+        generateQuestionsBtn.addEventListener('click', async () => {
+            const jobTitle = jobTitleInput.value.trim();
+            if (!jobTitle) {
+                questionsOutputEl.innerText = "Please enter a job title first.";
+                return;
+            }
+
+            const summary = document.getElementById('about-summary').innerText;
+            
+            questionsOutputEl.innerText = '';
+            questionsLoader.classList.remove('hidden');
+            copyQuestionsBtn.classList.add('hidden');
+            generateQuestionsBtn.disabled = true;
+            generateQuestionsBtn.classList.add('opacity-50', 'cursor-not-allowed');
+
+            const systemPrompt = "You are an expert recruitment consultant and hiring manager. Your task is to generate 3-5 insightful interview questions for a specific job role, based on the provided candidate's professional summary. The questions should be tailored to assess the candidate's suitability for the role, drawing connections between their experience and the job's potential responsibilities. Format the output as a numbered list.";
+            const userQuery = `The job role I am hiring for is: "${jobTitle}". Here is the candidate's summary: "${summary}". Please generate the interview questions.`;
+
+            try {
+                const generatedText = await callGeminiApi(systemPrompt, userQuery);
+                questionsOutputEl.innerText = generatedText;
+                if (!generatedText.startsWith("Sorry")) {
+                    copyQuestionsBtn.classList.remove('hidden');
+                }
+            } catch (error) {
+                console.error('Gemini API Error:', error);
+                questionsOutputEl.innerText = "An error occurred while contacting the AI model. Please check the console for details.";
+            } finally {
+                questionsLoader.classList.add('hidden');
+                generateQuestionsBtn.disabled = false;
+                generateQuestionsBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+            }
+        });
+        
+        copyQuestionsBtn.addEventListener('click', () => {
+            copyToClipboard(questionsOutputEl.innerText, 'copy-questions-message');
+        });
+
+        // --- Generic Clipboard Function ---
+        function copyToClipboard(text, messageElementId) {
+             const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = text;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            
+            try {
+                if (navigator.clipboard && window.isSecureContext) {
+                    navigator.clipboard.writeText(text);
+                } else {
+                    document.execCommand('copy');
+                }
+                
+                const copyMessage = document.getElementById(messageElementId);
+                copyMessage.style.opacity = '1';
+                setTimeout(() => {
+                    copyMessage.style.opacity = '0';
+                }, 2000);
+
+            } catch (err) {
+                console.error('Failed to copy text: ', err);
+            }
+            
+            document.body.removeChild(tempTextArea);
+        }
+
+    </script>
+
+</body>
+</html>
+
+
